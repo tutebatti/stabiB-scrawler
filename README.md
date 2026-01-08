@@ -1,15 +1,24 @@
-# stabiB-scraper
-Scraping information of mss at StaBi Berlin
+# stabiB-scrawler
+Crawling pages with manuscript lists in the virtual catalogue of the StaBi Berlin
+and scraping information with output to csv
 
-## Procedure
+## Installation
 
-- use ppn_scrawler to create list of xml urls
-- download all xml files using `xargs < xml_urls wget`
-- use `cat_xmls.sh` to concatenate xml files into one file
-- use xslt processor to convert `all_data.xml` to csv using `xml2csv.xsl`
+Using [uv](https://docs.astral.sh/uv/getting-started/installation/):
+
+```commandline
+git clone "https://github.com/tutebatti/stabiB-scrawler.git"
+cd stabiB-scrawler
+uv sync
+```
+
+## Usage
+
+```commandline
+uv run main.py
+```
 
 ## To do
 
-- add correct handling of multivolume manuscript entries
-- improve handling of dates
-- strip first empty line in csv output
+- Add correct handling of multivolume manuscript entries
+- Improve handling of dates
