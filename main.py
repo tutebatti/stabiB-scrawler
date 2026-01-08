@@ -1,5 +1,9 @@
+from src.stabiB_scrawler.scrawler import Scrawler
+
+
 def main():
-    print("Hello from stabib-scraper!")
+    scrawler = Scrawler()
+    scrawler.run()
 
 
 if __name__ == "__main__":
